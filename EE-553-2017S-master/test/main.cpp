@@ -1,19 +1,12 @@
 #include <iostream>
-#include "test.h"
 using namespace std;
 
-int x;
-void f(int x){
-    static int y=1;
-    x++;
-    cout <<x<< ::x << y++;
-    ::x--;
-}
-
-int main()
-{
-    int x =2;
-    f(x);
-    cout << x;
-    f(x);
+int main(){
+    int a[10];
+    int *b = a;
+    for (int i = 0; i < 10; i++){
+        *b++ = 0;
+        cout << a[i] << " ";
+    }
+    return 0;
 }
